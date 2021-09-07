@@ -21,6 +21,7 @@ public class UsedCarTest {
     public void OpenTests(){
         Driver.get().get(ConfigurationReader.get("url"));
         //SearchToolPage selectFilter = new SearchToolPage();
+        System.out.println(Driver.get().getTitle());
     }
     @Test
     public void UsedCarSearch() {

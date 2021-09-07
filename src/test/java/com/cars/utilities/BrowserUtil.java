@@ -10,9 +10,10 @@ import java.io.File;
 public class BrowserUtil {//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
 
 
-    public static void ScrollUp(WebElement element) {
+    public static void ScrollUp(WebElement element){
         Actions actions = new Actions(Driver.get());
         actions.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform();
+
     }
 
     public static void ScrollDown(WebElement element) {
