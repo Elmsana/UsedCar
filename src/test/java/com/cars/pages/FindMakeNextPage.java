@@ -1,6 +1,7 @@
 package com.cars.pages;
 
 import com.cars.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,14 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 public class SearchToolPage {
     public SearchToolPage(){ PageFactory.initElements(Driver.get(), this);
     }
-    @FindBy(css = "[id='make-model-search-stocktype']")
+    @FindBy(id = "make-model-search-stocktype")
     public WebElement searchByMake;
+    By NewAndUsedb = By.id("make-model-search-stocktype");
 
     @FindBy(css= "[id='make-model-search-stocktype'] [value='used']")
     public WebElement usedCars;
 
-    @FindBy(css = "[id='makes'] [value='honda']")
-    public WebElement allMake;
+    //@FindBy(css = "[id='makes'] [value='honda']")
+    //public WebElement allMake;
 
     @FindBy(css= "[id='models'] [value='honda-pilot']")
     public WebElement allModel;
@@ -85,6 +87,26 @@ public class SearchToolPage {
 
     @FindBy(xpath = "(//section[@class='sds-page-section'])[1]")
     public WebElement paymentCalculator;
+
+
+
+
+
+//select[@id='make-model-search-stocktype']
+//select[@id='makes']
+//select[@id='models']
+//select[@id='make-model-max-price']
+//select[@id='make-model-maximum-distance']
+//input[@id='make-model-zip']
+//button[@data-searchtype='make']
+
+//driver.findElement(By.xpath("//select[@id='make-model-search-stocktype']"))
+//        driver.findElement(By.xpath("//select[@id='makes']"))
+//        driver.findElement(By.xpath("//select[@id='models']"))
+//        driver.findElement(By.xpath("//select[@id='make-model-max-price']"))
+//        driver.findElement(By.xpath("//select[@id='make-model-maximum-distance']"))
+//        driver.findElement(By.xpath("//input[@id='make-model-zip']"))
+//        driver.findElement(By.xpath("//button[@data-searchtype='make']"))
 
 
 
